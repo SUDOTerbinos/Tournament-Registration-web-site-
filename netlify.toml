@@ -1,0 +1,18 @@
+[build]
+  # Directory to change to before running build
+  publish = "dist"
+  command = "npm run build"
+
+[build.environment]
+  # Environment variables for build
+  NODE_ENV = "production"
+
+[[redirects]]
+  # Redirect all routes to index.html for SPA
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[functions]
+  # Directory where serverless functions are located
+  directory = "netlify/functions"

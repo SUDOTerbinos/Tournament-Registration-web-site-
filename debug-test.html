@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Test</title>
+</head>
+<body>
+    <h1>Debug Test Page</h1>
+    <div id="root">Testing...</div>
+    <script>
+        console.log('Debug test page loaded');
+        
+        // Test localStorage functionality
+        try {
+            localStorage.setItem('test', 'value');
+            console.log('localStorage works');
+            localStorage.removeItem('test');
+        } catch (e) {
+            console.error('localStorage error:', e);
+        }
+        
+        // Test crypto.randomUUID
+        try {
+            const id = crypto.randomUUID();
+            console.log('crypto.randomUUID works:', id);
+        } catch (e) {
+            console.error('crypto.randomUUID error:', e);
+        }
+    </script>
+</body>
+</html>
